@@ -238,7 +238,9 @@ body{
 .contacto__p2__selec3{
     margin: 20px;
 }
+
 /*comida*/
+
 .selectores{
     background: #ee912673;
 }
@@ -262,29 +264,72 @@ body{
 }
 
 /*comida y lugares recomndados*/
+
 .negocio{
-    margin: 100px;
-    margin-left: 150px;
+    display: grid;
+
+    grid-area: 1fr;
+    grid-template-areas:
+    "t3"
+    "contenido3";
+    gap: 30px;
+    margin-left: 40px;
+    
 }
 
+.negocio h3{
+    grid-area: t3;
+    margin-top: 30px;
+    font-size: 30px;
+}
 
-.negocio__contenido {
-    overflow: hidden;
+.negocio h3 a{
+    text-decoration: none;
+    color: #000000;
     
+}
+
+.negocio h3 a:hover{
+    color: #ee9126;
+    font-size: 35px;
+}
+
+.negocio__contenido  {
+    grid-area: contenido3;
+    display: flex;
+    flex-direction: row;
+    max-width: 900px;
+    margin-bottom: 25px;
 }
   
   
 .negocio__contenido__imagen {
-    float: left;
-    width: 50%; 
-    height: 300px;
+    order: 1;
+    margin-right: 30px;
+    width: 1000px;
     
 }
   
 .negocio__contenido__p {
-    float: left;
-    width: 50%; 
-    box-sizing: border-box; 
+    order: 2; 
+    margin-left: 30px;
+    
+    
+}
+
+.negocio__contenido__p p{
+    margin-bottom: 30px;
+}
+
+.negocio__contenido__p a{
+    color: #000000;
+    text-decoration: none;
+    
+}
+
+.negocio__contenido__p a:hover{
+    color: #ee9126;
+    font-size: large;
 }
 
 /*Local*/
