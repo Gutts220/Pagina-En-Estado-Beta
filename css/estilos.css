@@ -24,82 +24,104 @@ body{
 
 /*Contenido pagina principal*/ 
 
-#locales{
+#locales {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
     max-width: 1000px;
-    margin:auto;
+    margin: auto;
+    padding: 0 40px;
 }
-
-#locales .T1{
-    margin: 40px;
-    font-size: 40px;
   
+#locales .T1 {
+    margin: 40px 0;
+    font-size: 40px;
 }
-
-#locales .local{
+  
+.local {
     display: grid;
     grid-area: 1fr;
     grid-template-areas:
     "t3"
     "contenido3";
     gap: 30px;
-    margin-left: 40px;
 }
-
-.local h3{
-    grid-area: t3;
-    margin-top: 30px;
-    font-size: 30px;
+  
+.local h3 {
+grid-area: t3;
+margin-top: 30px;
+font-size: 30px;
 }
-
-.local h3 a{
-    text-decoration: none;
-    color: #000000;
-    
+  
+.local h3 a {
+text-decoration: none;
+color: #000000;
 }
-
-.local h3 a:hover{
+  
+.local h3 a:hover {
     color: #ee9126;
     font-size: 35px;
 }
-
+  
 .local__contenido {
     grid-area: contenido3;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
   
-  
 .local__contenido__mapa {
-    order: 1;
+    flex: 0 0 300px;
     margin-right: 30px;
-    
+    margin-bottom: 30px;
 }
   
 .local__contenido__p {
-    order: 2; 
-    margin-left: 30px;
-    
-}
-
-.local__contenido__p p{
+    flex: 1;
     margin-bottom: 30px;
 }
-
-.local__contenido__p a{
+  
+.local__contenido__p p {
+    margin: 0;
+}
+  
+.local__contenido__p a {
     color: #000000;
     text-decoration: none;
-    
 }
-
-.local__contenido__p a:hover{
+  
+.local__contenido__p a:hover {
     color: #ee9126;
     font-size: large;
 }
-
   
+/* Estilos responsive */
+
+@media screen and (max-width: 768px) {
+    #locales {
+      padding: 0 20px;
+    }
+  
+    .local {
+      grid-template-areas:
+        "t3"
+        "contenido3";
+      gap: 20px;
+    }
+  
+    .local__contenido {
+      flex-direction: column;
+    }
+  
+    .local__contenido__mapa {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .local__contenido__p {
+      margin-bottom: 20px;
+    }
+}
 
 /*Formulario de contacto*/
 
@@ -285,94 +307,73 @@ body{
     font-size: large;
 }
 
-/*Local*/
-/*#local {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    
-  }
-  
-  .contenido__imagen img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .contenido {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
 
-  }
-  
-  .contenido__mapa {
-    grid-column: 2 / 3;
-  }
-  
-  .tabla {
-    margin-top: 20px;
-  }
-  */
+/* Local (Hamburguesería) */
 
-  #local {
+#local {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .contenido {
+}
+
+#local h1{
+    margin-top: 50px;
+}
+
+.contenido {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-  }
+}
   
-  .contenido__imagen {
+.contenido__imagen {
     margin-right: 20px;
     width: 400px;
     height: 400px;
     margin-left: 50px ;
-  }
+}
 
-  .contenido__imagen img{
+.contenido__imagen img{
     min-width: 300px;
     min-height: 300px;
-  }
+}
 
-  .contenido__p{
+.contenido__p{
     max-width: 400px;
 
-  }
+}
   
-  .contenido__mapa {
+.contenido__mapa {
     margin-left: 20px;
     margin-right: 50px;
-  }
+}
 
-  .contenido__mapa iframe {
+.contenido__mapa iframe {
     min-height: 200px;
     min-width: 200px;
-
-  }
+}
   
-  .tabla {
+.tabla {
     margin-top: 20px;
-    padding: 50px;
-  }
+    text-align: center;
+}
   
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     #local {
       flex-direction: column;
       align-items: center;
     }
-  
+
     .contenido {
       flex-direction: column;
       align-items: center;
     }
   
     .contenido__imagen {
-      margin-right: 0;
-      margin-bottom: 20px;
+      margin-right: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   
     .contenido__textos {
@@ -382,23 +383,18 @@ body{
     }
   
     .contenido__mapa {
-      margin-left: 0;
+      margin-left: 50px;
       margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-  }
 
-/*
-  @media screen and (max-width: 768px) {
-    #local {
-        display:grid;
-      grid-template-columns: 1fr;
+    .tabla {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 50px;
+        margin-right: 50px;
     }
-  
-    .contenido {
-      grid-template-columns: 1fr;
-    }
-  
-    .contenido__mapa {
-      grid-column: auto;
-    }
-  }
+}
