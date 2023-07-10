@@ -82,7 +82,7 @@ color: #000000;
 }
   
 .local__contenido__p p {
-    margin: 0;
+    margin-bottom: 20px;
 }
   
 .local__contenido__p a {
@@ -108,6 +108,11 @@ color: #000000;
         "t3"
         "contenido3";
       gap: 20px;
+      align-items: center;
+    }
+
+    .local h3{
+        margin-left: 40px;
     }
   
     .local__contenido {
@@ -130,6 +135,7 @@ color: #000000;
 
     .local__contenido__p p{
         width: 300px;
+        margin-bottom: 20px;
 
     }
 }
@@ -353,6 +359,15 @@ color: #000000;
     max-width: 400px;
 
 }
+
+.contenido__p a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.contenido__p a:hover{
+    color: #ee9126;
+}
   
 .contenido__mapa {
     margin-left: 20px;
@@ -375,6 +390,11 @@ color: #000000;
       align-items: center;
     }
 
+    .local h1{
+        margin-bottom: 40px;
+
+    }
+
     .contenido {
       flex-direction: column;
       align-items: center;
@@ -395,8 +415,7 @@ color: #000000;
     }
   
     .contenido__mapa {
-      margin-left: 50px;
-      margin-top: 20px;
+      margin: 20px 50px;
       display: flex;
       flex-direction: column;
       align-items: center;
