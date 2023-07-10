@@ -10,11 +10,11 @@
   margin-top: 30px;
   font-size: 30px;
 }
-.negocio h3 h3 a {
+.negocio h3 a {
   text-decoration: none;
   color: #000000;
 }
-.negocio h3 h3 a a:hover {
+.negocio h3 a:hover {
   color: #ee9126;
   font-size: 35px;
 }
@@ -30,18 +30,18 @@
   margin-right: 30px;
   max-width: 100%;
 }
-.negocio__contenido___p {
+.negocio__contenido__p {
   flex: 1;
   margin-left: 30px;
 }
-.negocio__contenido___p p {
+.negocio__contenido__p p {
   margin-bottom: 30px;
 }
-.negocio__contenido___p a {
+.negocio__contenido__p a {
   color: #000000;
   text-decoration: none;
 }
-.negocio__contenido___p a:hover {
+.negocio__contenido__p a:hover {
   color: #ee9126;
   font-size: large;
 }

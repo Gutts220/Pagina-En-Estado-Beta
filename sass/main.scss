@@ -8,14 +8,17 @@
       "contenido3";
     gap: 30px;
     margin-left: 40px;
+
     h3 {
         grid-area: t3;
         margin-top: 30px;
         font-size: 30px;
-        h3 a {
+
+        a {
             text-decoration: none;
             color: #000000;
-            & a:hover {
+            
+            &:hover {
                 color: #ee9126;
                 font-size: 35px;
             }
@@ -35,7 +38,7 @@
             max-width: 100%;
         }
   
-        &___p {
+        &__p {
             flex: 1;
             margin-left: 30px;
             
